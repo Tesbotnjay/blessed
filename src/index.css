@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+  
+  --color-melody-bg: #FCF7F8;
+  --color-melody-pink: #F4BAC8;
+  --color-melody-dark: #5C4B51;
+  --color-melody-soft: #F9E2E7;
+}
+
+@layer base {
+  body {
+    @apply bg-melody-bg text-melody-dark font-sans antialiased overflow-x-hidden selection:bg-melody-pink selection:text-white;
+  }
+}
+
+/* Minimalist custom scrollbar for elegance */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-melody-soft);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-melody-pink);
+}
+
+.letter-gradient {
+  background: linear-gradient(to bottom, #FCF7F8 0%, #FAEFF1 100%);
+}
